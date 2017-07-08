@@ -5,6 +5,8 @@ defmodule FileReaderTest do
 	import PluralsightTweet.FileReader
 	import PluralsightTweet.TweetPicker
 
+	doctest PluralsightTweet.FileReader
+
 	test "Passing a file should return a string" do
 		file_path = Path.join("#{:code.priv_dir(:pluralsight_tweet)}", "sample.txt")
 		str = get_strings_to_tweet(file_path)
