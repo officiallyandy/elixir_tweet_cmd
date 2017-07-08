@@ -25,11 +25,23 @@ defmodule FileReaderTest do
 		assert str == ""
 	end
 
+	@tag mocked: true
 	test "The string should be trimeed" do
+		# By mocking file read, it's going return that string content below no matter what... 
 		with_mock File, [read!: fn(_) -> " ABC " end] do
 			str = get_strings_to_tweet("this file doesn't exist.txt")
 
 			assert str == "ABC"
+		end
+	end
+
+	@tag mocked: true
+	test "Empty string should return empty string" do
+		# since empty string is return on File read... the tweet method should return empty string.
+		with_mock File, [read!: fn(_) ->"" end] do
+			str = get_strings_to_tweet("this file doesn't exist.txt")
+
+			assert str == "" 
 		end
 	end
 end

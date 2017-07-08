@@ -34,7 +34,8 @@ defmodule PluralsightTweet.Mixfile do
       {:quantum, "~> 1.8"},
       {:extwitter, "~> 0.7.2"},
       {:oauth, github: "tim/erlang-oauth"},
-      {:mock, "~> 0.2.1"}
+      {:mock, "~> 0.2.1"},
+      {:mix_test_watch, "~> 0.4.1"}
     ]
   end
 end
