@@ -33,7 +33,8 @@ defmodule PluralsightTweet.Mixfile do
       {:credo, "~> 0.4.11"},
       {:quantum, "~> 1.8"},
       {:extwitter, "~> 0.7.2"},
-      {:oauth, github: "tim/erlang-oauth"}
+      {:oauth, github: "tim/erlang-oauth"},
+      {:mock, "~> 0.2.1"}
     ]
   end
 end
